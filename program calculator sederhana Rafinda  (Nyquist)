@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    char op;
+    double num1,num2;
+   
+   cout << "masukan pengoperasian yang diinginkan (+,-,*,/) : ";
+   cin >> op;
+   
+   cout << "masukkan 2 angka secara berurutan : ";
+   cin >> num1 >> num2;
+   
+   switch (op){
+       
+       case '+':
+        cout << num1 << "+" << num2 << "=" << (num1 + num2);
+        break;
+       
+       case '-':
+        cout << num1 << "-" << num2 << "=" << (num1 - num2);
+        break;
+       
+       case '*':
+        cout << num1 << "*" << num2 << "=" << (num1 * num2);
+        break;
+        
+       case '/':
+        if ( num2 != 0.0)
+            cout << num1 << "/" << num2 << "=" << (num1 / num2);
+        else
+            cout << "tidak terdefinisi";
+            
+            break;
+            
+        default:
+            cout << op << "pengoperasian tidak ditemukan";
+    
+   }
+    return 0;
+}
